@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HackPath - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Welcome to Your Dashboard</h1>
+
+  <!-- Tabs -->
+  <div>
+    <button onclick="showTab('projects')">Projects</button>
+    <button onclick="showTab('mentorship')">Mentorship</button>
+  </div>
+
+  <!-- Sections -->
+  <div id="projects">
+    <h2>Your Projects</h2>
+    <button>Create New Project</button>
+    <ul>
+      <li>Project 1</li>
+      <li>Project 2</li>
+    </ul>
+  </div>
+
+  <div id="mentorship" style="display:none;">
+    <h2>Schedule Mentorship</h2>
+    <button>Book a Session</button>
+  </div>
+
+  <a href="index.html">Logout</a>
+
+  <script>
+    function showTab(tab) {
+      document.getElementById('projects').style.display = tab === 'projects' ? 'block' : 'none';
+      document.getElementById('mentorship').style.display = tab === 'mentorship' ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
